@@ -506,6 +506,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b479a45a6cbb76b479ae80c99526b4c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 12
+  gravity: -19.62
+  jumpHeight: 3
 --- !u!114 &359775020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4d3d754cbf8fe24eab332c51acfaf09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 100
+  mouseSensitivity: 800
   topClamp: -90
   bottomClamp: 90
 --- !u!143 &359775021
