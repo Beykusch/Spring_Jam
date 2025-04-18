@@ -24,7 +24,7 @@ public class Weapon : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
         
         //shoot the bullet
-        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward.normalized, ForceMode.Impulse);
+        bullet.GetComponent<Rigidbody>().AddForce(bulletSpawn.forward.normalized * bulletVelocity, ForceMode.Impulse);
         StartCoroutine(DestroyBulletAfterTime(bullet, bulletLifeTime));
     }
 
