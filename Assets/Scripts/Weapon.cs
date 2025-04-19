@@ -25,7 +25,7 @@ public class Weapon : MonoBehaviour
 
     //Muzzle
     public GameObject muzzleEffect;
-    private Animator animator;
+    internal Animator animator;
 
     //Reloading
     public float reloadTime;

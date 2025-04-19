@@ -41,6 +41,16 @@ public class WeaponManager : MonoBehaviour
                 weaponSlot.SetActive(false);
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            SwitchActiveSlot(0);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwitchActiveSlot(1);
+        }
+
     }
 
 
@@ -61,6 +71,7 @@ public class WeaponManager : MonoBehaviour
         pickedupWeapon.transform.localRotation = Quaternion.Euler(weapon.spawnRotation.x, weapon.spawnRotation.y, weapon.spawnRotation.z);
 
         weapon.isActiveWeapon = true;
+        weapon.animator.enabled = true;
     }
 
     private void DropCurrentWeapon(GameObject pickedupWeapon)
@@ -74,6 +85,23 @@ public class WeaponManager : MonoBehaviour
             weaponToDrop.transform.SetParent(pickedupWeapon.transform.parent);
             weaponToDrop.transform.localPosition = pickedupWeapon.transform.localPosition;
             weaponToDrop.transform.localRotation = pickedupWeapon.transform.localRotation;
+        }
+    }
+
+    public void SwitchActiveSlot(int slotNumber)
+    {
+        if (activeWeaponSlot.transform.childCount > 0)
+        {
+            Weapon currentWeapon = activeWeaponSlot.transform.GetChild(0).GetComponent<Weapon>();
+            currentWeapon.isActiveWeapon = false;
+        }
+
+        activeWeaponSlot = weaponSlots[slotNumber];
+
+        if (activeWeaponSlot.transform.childCount > 0)
+        {
+            Weapon newWeapon = activeWeaponSlot.transform.GetChild(0).GetComponent<Weapon>();
+            newWeapon.isActiveWeapon = true;
         }
     }
 }
