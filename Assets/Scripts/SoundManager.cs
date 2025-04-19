@@ -1,4 +1,5 @@
 using UnityEngine;
+using static Weapon;
 
 public class SoundManager : MonoBehaviour
 {
@@ -16,6 +17,34 @@ public class SoundManager : MonoBehaviour
         else
         {
             Instance = this;
+        }
+    }
+
+    public void PlayShootingSound(WeaponModel weapon)
+    {
+        switch (weapon)
+        {
+            case WeaponModel.Pistol:
+                shootingSoundPistol.Play();
+                break;
+            case WeaponModel.M4:
+                //play M4 sound
+                break;
+
+        }
+    }
+
+    public void PlayReloadSound(WeaponModel weapon)
+    {
+        switch (weapon)
+        {
+            case WeaponModel.Pistol:    
+                reloadingSoundPistol.Play();
+                break;
+            case WeaponModel.M4:
+                //play M4 sound
+                break;
+
         }
     }
 }
