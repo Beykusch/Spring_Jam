@@ -4,7 +4,7 @@ public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance { get; set; }
 
-
+    public AudioSource shootingSoundPistol;
     private void Awake()
     {
         if (Instance != null && Instance != this)
