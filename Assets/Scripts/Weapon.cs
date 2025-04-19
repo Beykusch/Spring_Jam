@@ -78,7 +78,7 @@ public class Weapon : MonoBehaviour
             Reload();
         }
 
-        if(readyToShoot && isShooting && bulletsLeft > 0)
+        if(readyToShoot && isShooting && bulletsLeft > 0 && isReloading == false)
         {
             burstBulletsLeft = bulletsPerBurst;
             FireWeapon();
