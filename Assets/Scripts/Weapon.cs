@@ -32,6 +32,13 @@ public class Weapon : MonoBehaviour
     public int magazineSize, bulletsLeft;
     public bool isReloading;
 
+    public enum WeaponModel
+    {
+        Pistol,
+        M4
+    }
+
+    public WeaponModel thisWeaponModel;
 
     public enum ShootingMode
     {
