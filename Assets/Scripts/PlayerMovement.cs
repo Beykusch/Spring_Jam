@@ -29,28 +29,31 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2f;
+            velocity.y = -2f; // slight downward force to keep grounded
         }
 
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
+        Vector3 horizontalVelocity = move * speed;
 
-        controller.Move(move * speed * Time.deltaTime);
-
-        if(isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump"))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        velocity.y += gravity * Time.deltaTime; 
+        velocity.y += gravity * Time.deltaTime;
 
-        controller.Move(velocity * Time.deltaTime);
+        // Combine horizontal and vertical movement
+        Vector3 finalVelocity = new Vector3(horizontalVelocity.x, velocity.y, horizontalVelocity.z);
 
-        if(lastPosition != gameObject.transform.position && isGrounded == true)
+        controller.Move(finalVelocity * Time.deltaTime);
+
+        // Movement detection logic
+        if (lastPosition != transform.position && isGrounded)
         {
             isMoving = true;
         }
@@ -59,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
             isMoving = false;
         }
 
-        lastPosition = gameObject.transform.position;
-
+        lastPosition = transform.position;
     }
 }
