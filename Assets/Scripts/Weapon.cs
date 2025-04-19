@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -26,6 +27,14 @@ public class Weapon : MonoBehaviour
     public GameObject muzzleEffect;
     private Animator animator;
 
+    //Reloading
+    public float reloadTime;
+    public int magazineSize, bulletsLeft;
+    public bool isReloading;
+
+    //UI
+    public TextMeshProUGUI ammoDisplay;
+
     public enum ShootingMode
     {
         Single,
@@ -39,6 +48,8 @@ public class Weapon : MonoBehaviour
         readyToShoot = true;
         burstBulletsLeft = bulletsPerBurst;
         animator = GetComponent<Animator>();
+
+        bulletsLeft = magazineSize;
     }
 
 
@@ -53,15 +64,33 @@ public class Weapon : MonoBehaviour
             isShooting = Input.GetKeyDown(KeyCode.Mouse0);
         }
 
+        //Reload
+        if(Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && isReloading == false)
+        {
+            Reload();
+        }
+
+        if(readyToShoot && isShooting == false && isReloading == false && bulletsLeft <= 0)
+        {
+            Reload();
+        }
+
         if(readyToShoot && isShooting)
         {
             burstBulletsLeft = bulletsPerBurst;
             FireWeapon();
         }
+
+        if (ammoDisplay != null)
+        {
+            ammoDisplay.text = $"{bulletsLeft / bulletsPerBurst}/{magazineSize / bulletsPerBurst}";
+        }
     }
 
     private void FireWeapon()
     {
+        bulletsLeft--;
+        
         muzzleEffect.GetComponent<ParticleSystem>().Play();
         animator.SetTrigger("RECOIL");
 
@@ -88,6 +117,18 @@ public class Weapon : MonoBehaviour
             Invoke("ResetShot", shootingDelay);
             allowReset = false;
         }
+    }
+
+    private void Reload()
+    {
+        isReloading = true;
+        Invoke("ReloadCompleted", reloadTime);
+    }
+
+    private void ReloadCompleted()
+    {
+        bulletsLeft = magazineSize;
+        isReloading = false;
     }
 
     private void ResetShot() 
