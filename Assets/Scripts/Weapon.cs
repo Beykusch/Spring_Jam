@@ -33,7 +33,7 @@ public class Weapon : MonoBehaviour
     public bool isReloading;
 
     public Vector3 spawnPosition;
-    public Vector3 Rotation;
+    public Vector3 spawnRotation;
 
     public enum WeaponModel
     {

@@ -355,6 +355,8 @@ MonoBehaviour:
   magazineSize: 30
   bulletsLeft: 0
   isReloading: 0
+  spawnPosition: {x: 0.264, y: 1.41, z: 1.02}
+  spawnRotation: {x: 0, y: 0, z: 0}
   thisWeaponModel: 0
   currentShootingMode: 1
 --- !u!95 &3759670725213272229
