@@ -77,6 +77,10 @@ public class WeaponManager : MonoBehaviour
         weapon.isActiveWeapon = true;
         weapon.animator.enabled = true;
     }
+    internal void PickupAmmo(string name)
+    {
+        print("Picked up ammo");
+    }
 
     private void DropCurrentWeapon(GameObject pickedupWeapon)
     {
@@ -109,4 +113,5 @@ public class WeaponManager : MonoBehaviour
             newWeapon.isActiveWeapon = true;
         }
     }
+
 }
