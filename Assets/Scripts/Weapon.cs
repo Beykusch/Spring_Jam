@@ -32,8 +32,6 @@ public class Weapon : MonoBehaviour
     public int magazineSize, bulletsLeft;
     public bool isReloading;
 
-    //UI
-    public TextMeshProUGUI ammoDisplay;
 
     public enum ShootingMode
     {
@@ -81,9 +79,9 @@ public class Weapon : MonoBehaviour
             FireWeapon();
         }
 
-        if (ammoDisplay != null)
+        if (AmmoManager.Instance.ammoDisplay != null)
         {
-            ammoDisplay.text = $"{bulletsLeft / bulletsPerBurst}/{magazineSize / bulletsPerBurst}";
+            AmmoManager.Instance.ammoDisplay.text = $"{bulletsLeft / bulletsPerBurst}/{magazineSize / bulletsPerBurst}";
         }
     }
 
