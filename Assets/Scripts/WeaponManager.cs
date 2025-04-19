@@ -56,7 +56,11 @@ public class WeaponManager : MonoBehaviour
 
     public void PickupWeapon(GameObject pickedupWeapon)
     {
+        var weapon = pickedupWeapon.GetComponent<Weapon>();
+        foreach (MeshRenderer hand in weapon.hands) hand.enabled = true;
+        
         AddWeaponIntoActiveSlot(pickedupWeapon);
+       
     }
 
     private void AddWeaponIntoActiveSlot(GameObject pickedupWeapon)
@@ -80,7 +84,8 @@ public class WeaponManager : MonoBehaviour
         {
             var weaponToDrop = activeWeaponSlot.transform.GetChild(0).gameObject;
 
-            weaponToDrop.GetComponent<Weapon>().isActiveWeapon = false;
+            weaponToDrop.GetComponent<Weapon>().isActiveWeapon = false; 
+            weaponToDrop.GetComponent<Weapon>().animator.enabled = false;
 
             weaponToDrop.transform.SetParent(pickedupWeapon.transform.parent);
             weaponToDrop.transform.localPosition = pickedupWeapon.transform.localPosition;

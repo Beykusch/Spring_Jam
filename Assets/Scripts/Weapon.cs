@@ -1,9 +1,12 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    public List<MeshRenderer> hands = new List<MeshRenderer>();
+
     public bool isActiveWeapon;
     //Shooting
     public bool isShooting, readyToShoot;

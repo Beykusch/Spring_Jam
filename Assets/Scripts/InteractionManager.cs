@@ -34,7 +34,7 @@ public class InteractionManager : MonoBehaviour
 
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    WeaponManager.Instance.PickupWeapon(objectHitByRaycast.gameObject); 
+                    WeaponManager.Instance.PickupWeapon(objectHitByRaycast.gameObject);
                 }
             }
             else
