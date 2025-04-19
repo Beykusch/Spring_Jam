@@ -53,6 +53,11 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        if(bulletsLeft == 0 && isShooting)
+        {
+            SoundManager.Instance.emptySoundPistol.Play();
+        }
+        
         if(currentShootingMode == ShootingMode.Auto)
         {
             isShooting = Input.GetKey(KeyCode.Mouse0);
@@ -73,7 +78,7 @@ public class Weapon : MonoBehaviour
             Reload();
         }
 
-        if(readyToShoot && isShooting)
+        if(readyToShoot && isShooting && bulletsLeft > 0)
         {
             burstBulletsLeft = bulletsPerBurst;
             FireWeapon();
@@ -119,6 +124,8 @@ public class Weapon : MonoBehaviour
 
     private void Reload()
     {
+        SoundManager.Instance.reloadingSoundPistol.Play(); 
+        
         isReloading = true;
         Invoke("ReloadCompleted", reloadTime);
     }
