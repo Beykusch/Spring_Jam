@@ -125,7 +125,9 @@ public class Weapon : MonoBehaviour
 
     private void Reload()
     {
-        SoundManager.Instance.reloadingSoundPistol.Play(); 
+        SoundManager.Instance.reloadingSoundPistol.Play();
+
+        animator.SetTrigger("RELOAD");
         
         isReloading = true;
         Invoke("ReloadCompleted", reloadTime);
