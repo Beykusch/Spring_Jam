@@ -4,6 +4,8 @@ public class InteractionManager : MonoBehaviour
 {
     public static InteractionManager Instance { get; set; }
 
+    public Weapon hoveredWeapon = null;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -27,7 +29,15 @@ public class InteractionManager : MonoBehaviour
 
             if(objectHitByRaycast.GetComponent<Weapon>())
             {
-                print("Weapon Selected");
+                hoveredWeapon = objectHitByRaycast.gameObject.GetComponent<Weapon>();
+                hoveredWeapon.GetComponent<Outline>().enabled = true;
+            }
+            else
+            {
+                if (hoveredWeapon)
+                {
+                    hoveredWeapon.GetComponent<Outline>().enabled = false;
+                }
             }
         }
     }
