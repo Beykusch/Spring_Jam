@@ -29,6 +29,11 @@ public class InteractionManager : MonoBehaviour
         {
             GameObject objectHitByRaycast = hit.transform.gameObject;
 
+            if(objectHitByRaycast.gameObject.tag == "Door" && Input.GetKeyDown(KeyCode.F))
+            {
+                Destroy(objectHitByRaycast.gameObject);
+            }
+            
             if(objectHitByRaycast.GetComponent<Weapon>() && objectHitByRaycast.GetComponent<Weapon>().isActiveWeapon == false)
             {
                 hoveredWeapon = objectHitByRaycast.gameObject.GetComponent<Weapon>();
