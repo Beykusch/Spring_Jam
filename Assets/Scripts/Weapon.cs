@@ -7,7 +7,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public List<MeshRenderer> hands = new List<MeshRenderer>();
-
+    public int weaponDamage;
     public bool isActiveWeapon;
     //Shooting
     [Header("Shooting")]
@@ -133,6 +133,13 @@ public class Weapon : MonoBehaviour
             }
 
         }
+        else
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.layer = LayerMask.NameToLayer("Default");
+            }
+        }
     }
     private void EnterADS()
     {
@@ -175,6 +182,10 @@ public class Weapon : MonoBehaviour
 
         //instantiate bullet
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.position, Quaternion.identity);
+
+        Bullet bul = bullet.GetComponent<Bullet>();
+        bul.bulletDamage = weaponDamage;
+
 
         bullet.transform.forward = shootingDirection;
 
