@@ -2632,7 +2632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShootingChannel: {fileID: 989194500}
-  PistolShot: {fileID: 8300000, guid: ed2e1c3d5fe5b834c9281f46eaff1347, type: 3}
+  PistolShot: {fileID: 8300000, guid: 4087407a9e4f73844ada45f59cd81a9b, type: 3}
   M4Shot: {fileID: 8300000, guid: 8bf33975d1dfc11459ab35fec6c8f1c9, type: 3}
   reloadingSoundPistol: {fileID: 989194499}
   reloadingSoundM4: {fileID: 989194498}
@@ -2856,8 +2856,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 80d56469f54eb2e4092a15913b93d9fd, type: 3}
-  m_Resource: {fileID: 8300000, guid: 80d56469f54eb2e4092a15913b93d9fd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 725f1b1932e7f6945bb094e27b1eb6f3, type: 3}
+  m_Resource: {fileID: 8300000, guid: 725f1b1932e7f6945bb094e27b1eb6f3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.491
   m_Pitch: 1
@@ -2956,7 +2956,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.547
+  m_Volume: 0.502
   m_Pitch: 1
   Loop: 0
   Mute: 0
