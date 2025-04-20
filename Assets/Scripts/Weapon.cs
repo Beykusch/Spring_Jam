@@ -216,16 +216,13 @@ public class Weapon : MonoBehaviour
 
     private void ReloadCompleted()
     {
-        if (WeaponManager.Instance.CheckAmmoLeftFor(thisWeaponModel) > magazineSize)
-        {
-            bulletsLeft = magazineSize;
-            WeaponManager.Instance.DecreaseTotalAmmo(bulletsLeft, thisWeaponModel);
-        }
-        else
-        {
-            bulletsLeft = WeaponManager.Instance.CheckAmmoLeftFor(thisWeaponModel);
-            WeaponManager.Instance.DecreaseTotalAmmo(bulletsLeft, thisWeaponModel);
-        }
+        int bulletsNeeded = magazineSize - bulletsLeft;
+        int availableAmmo = WeaponManager.Instance.CheckAmmoLeftFor(thisWeaponModel);
+        int bulletsToReload = Math.Min(bulletsNeeded, availableAmmo);
+
+        bulletsLeft += bulletsToReload;
+
+        WeaponManager.Instance.DecreaseTotalAmmo(bulletsToReload, thisWeaponModel);
 
         isReloading = false;
     }
