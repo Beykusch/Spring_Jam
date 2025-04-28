@@ -9,7 +9,11 @@ EditorBuildSettings:
     path: Assets/Aziz/MainMenu.unity
     guid: 12eda92fc4298d149b961a324dfd7311
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   - enabled: 1
+=======
+  - enabled: 0
+>>>>>>> Stashed changes
 =======
   - enabled: 0
 >>>>>>> Stashed changes
