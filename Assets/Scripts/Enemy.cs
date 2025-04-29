@@ -4,6 +4,8 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int HP = 100;
+    [SerializeField] private int experienceOnDeath = 10;
+
     private Animator animator;
 
     private NavMeshAgent navAgent;
@@ -22,6 +24,12 @@ public class Enemy : MonoBehaviour
         {
             animator.SetTrigger("DIE");
             Destroy(gameObject);
+
+            ExperienceManager xpManager = FindAnyObjectByType<ExperienceManager>();
+            if (xpManager != null)
+            {
+                xpManager.GainExperience(experienceOnDeath);
+            }
         }
         else
         {
