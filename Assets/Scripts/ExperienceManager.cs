@@ -42,7 +42,7 @@ public class ExperienceManager : MonoBehaviour
 
     void UpdateInterface()
     {
-        levelText.text = "Level " + currentLevel;
+        levelText.text = "Lv " + currentLevel;
 
         float targetFill = (float)currentXP / requiredXP;
 
