@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b426d9bdc8439942800857d433fc064, type: 3}
   m_Name: Damage
   m_EditorClassIdentifier: 
-  powerUpName: 
-  description: 
+  powerUpName: Muscle
+  description: Damage +16
   icon: {fileID: 0}
   type: 0
-  value: 0
+  value: 16
