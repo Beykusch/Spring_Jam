@@ -75,7 +75,7 @@ public class PowerUpManager : MonoBehaviour
                 FindAnyObjectByType<HealthBar>().slider.value += (int)powerUp.value;
                 break;
             case PowerUp.PowerUpType.Power:
-                Weapon[] allWeapons = FindObjectsOfType<Weapon>();
+                Weapon[] allWeapons = Resources.FindObjectsOfTypeAll<Weapon>();
                 foreach (Weapon weapon in allWeapons)
                 {
                     weapon.weaponDamage += (int)powerUp.value;
