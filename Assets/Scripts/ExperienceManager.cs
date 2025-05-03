@@ -35,6 +35,7 @@ public class ExperienceManager : MonoBehaviour
         {
             currentXP -= requiredXP;
             currentLevel++;
+            FindAnyObjectByType<PowerUpManager>().ShowPowerUps();
             // Optional: Increase required XP per level
             // requiredXP += 50;
         }
