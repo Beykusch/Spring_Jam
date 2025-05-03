@@ -68,13 +68,13 @@ public class PowerUpManager : MonoBehaviour
     {
         switch (powerUp.type)
         {
-            case PowerUp.PowerUpType.Stealth:
+            case PowerUp.PowerUpType.Speedster:
                 FindAnyObjectByType<PlayerMovement>().speed += powerUp.value;
                 break;
             case PowerUp.PowerUpType.Tank:
                 FindAnyObjectByType<HealthBar>().slider.value += (int)powerUp.value;
                 break;
-            case PowerUp.PowerUpType.Power:
+            case PowerUp.PowerUpType.Damage:
                 Weapon[] allWeapons = Resources.FindObjectsOfTypeAll<Weapon>();
                 foreach (Weapon weapon in allWeapons)
                 {

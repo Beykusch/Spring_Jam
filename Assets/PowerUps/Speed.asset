@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b426d9bdc8439942800857d433fc064, type: 3}
-  m_Name: Stealth
+  m_Name: Speed
   m_EditorClassIdentifier: 
-  powerUpName: 
-  description: 
+  powerUpName: Fast
+  description: Move Speed +10
   icon: {fileID: 0}
-  type: 0
-  value: 0
+  type: 1
+  value: 10

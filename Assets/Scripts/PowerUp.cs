@@ -7,7 +7,7 @@ public class PowerUp : ScriptableObject
     public string description;
     public Sprite icon;
 
-    public enum PowerUpType { Power, Stealth, Tank }
+    public enum PowerUpType { Damage, Speedster, Tank }
     public PowerUpType type;
     public float value;
 }
