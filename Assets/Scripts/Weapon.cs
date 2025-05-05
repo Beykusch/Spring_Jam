@@ -7,7 +7,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public List<MeshRenderer> hands = new List<MeshRenderer>();
-    public int weaponDamage;
+    public int weaponDamage = 50;
     public bool isActiveWeapon;
     //Shooting
     [Header("Shooting")]

@@ -8,6 +8,7 @@ public class PowerUpManager : MonoBehaviour
 {
     public GameObject middlePoint;
     public GameObject powerUpPanel;
+    public GameObject expFill;
     public Button[] powerUpButtons;
     public PowerUp[] allPowerUps;
 

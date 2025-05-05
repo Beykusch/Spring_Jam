@@ -19,47 +19,50 @@ public class ExperienceManager : MonoBehaviour
 
     void Start()
     {
-        UpdateInterface();
+        
     }
 
     public void GainExperience(int amount)
     {
         currentXP += amount;
-        CheckForLevelUp();
-        UpdateInterface();
+
+        bool leveledUp = CheckForLevelUp();
+
+        UpdateInterface(leveledUp); // Only animate bar specially if level-up happened
     }
 
-    void CheckForLevelUp()
+    bool CheckForLevelUp()
     {
+        bool leveledUp = false;
+
         while (currentXP >= requiredXP)
         {
             currentXP -= requiredXP;
             currentLevel++;
-            FindAnyObjectByType<PowerUpManager>().ShowPowerUps();
-            // Optional: Increase required XP per level
-            // requiredXP += 50;
+            leveledUp = true;
         }
+
+        return leveledUp;
     }
 
-    void UpdateInterface()
+    void UpdateInterface(bool levelUpOccurred)
     {
         levelText.text = "Lv " + currentLevel;
-
         float targetFill = (float)currentXP / requiredXP;
 
-        // Stop previous fill animation if it's running
         if (fillCoroutine != null)
             StopCoroutine(fillCoroutine);
 
-        fillCoroutine = StartCoroutine(AnimateFill(targetFill));
+        fillCoroutine = StartCoroutine(AnimateFill(targetFill, levelUpOccurred));
     }
 
-    IEnumerator AnimateFill(float targetFill)
+    IEnumerator AnimateFill(float targetFill, bool levelUpOccurred)
     {
-        float duration = 0.5f; // Duration of fill animation
+        float duration = 0.5f;
         float startFill = experienceFill.fillAmount;
         float time = 0f;
 
+        // Animate to fill target
         while (time < duration)
         {
             time += Time.deltaTime;
@@ -67,6 +70,22 @@ public class ExperienceManager : MonoBehaviour
             yield return null;
         }
 
-        experienceFill.fillAmount = targetFill; // Ensure it's exact
+        experienceFill.fillAmount = targetFill;
+
+        if (levelUpOccurred)
+        {
+            // 1. Animate to full
+            yield return new WaitForSeconds(0.3f);
+            experienceFill.fillAmount = 1f;
+
+            // 2. Pause while it's full
+            yield return new WaitForSeconds(0.5f);
+
+            // 3. Reset the bar visually
+            experienceFill.fillAmount = 0f;
+
+            // 4. Now show the power-up panel
+            FindAnyObjectByType<PowerUpManager>().ShowPowerUps();
+        }
     }
 }
