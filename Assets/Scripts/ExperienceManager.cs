@@ -74,10 +74,6 @@ public class ExperienceManager : MonoBehaviour
 
         if (levelUpOccurred)
         {
-            // 1. Animate to full
-            yield return new WaitForSeconds(0.3f);
-            experienceFill.fillAmount = 1f;
-
             // 2. Pause while it's full
             yield return new WaitForSeconds(0.5f);
 

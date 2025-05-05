@@ -5,15 +5,25 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private int HP = 100;
     [SerializeField] private int experienceOnDeath = 10;
+    public EnemyType type;
 
     private Animator animator;
 
     private NavMeshAgent navAgent;
 
+    public enum EnemyType
+    {
+        Special,
+        Goon
+    }
+
     void Start()
     {
         animator = GetComponent<Animator>();
         navAgent = GetComponent<NavMeshAgent>();
+        //PlayerPrefs.SetInt("HealthEnemy", 75);
+        //string x = PlayerPrefs.GetInt("HealthEnemy").ToString();
+        //int health = PlayerPrefs.GetInt("HealthEnemy") - 25;
     }
 
     // Update is called once per frame
