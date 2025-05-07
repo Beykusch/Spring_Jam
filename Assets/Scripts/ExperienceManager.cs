@@ -11,9 +11,11 @@ public class ExperienceManager : MonoBehaviour
     int requiredXP = 80;
 
     [Header("Interface")]
+    [SerializeField] GameObject powerUpPanel;
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] Image experienceFill;
 
+    bool isAnimating = false;
     private float currentFillAmount = 0f;
     private Coroutine fillCoroutine;
 
@@ -26,9 +28,44 @@ public class ExperienceManager : MonoBehaviour
     {
         currentXP += amount;
 
-        bool leveledUp = CheckForLevelUp();
+        if (fillCoroutine != null)
+            StopCoroutine(fillCoroutine);
 
-        UpdateInterface(leveledUp); // Only animate bar specially if level-up happened
+        fillCoroutine = StartCoroutine(FillAndCheckXP());
+    }
+
+    IEnumerator FillAndCheckXP()
+    {
+        isAnimating = true;
+
+        while (currentXP >= requiredXP)
+        {
+            // Step 1: Animate to full
+            yield return AnimateFill(1f);
+
+            // Step 2: Pause briefly to show full bar
+            yield return new WaitForSeconds(0.2f);
+
+            // Step 3: Level up
+            currentXP -= requiredXP;
+            currentLevel++;
+            levelText.text = "Lv " + currentLevel;
+
+            // Step 4: Reset bar visually
+            experienceFill.fillAmount = 0f;
+
+            // Step 5: Show panel
+            FindAnyObjectByType<PowerUpManager>().ShowPowerUps();
+
+            // Step 6 (optional): Wait until panel closes if it's modal
+            yield return new WaitUntil(() => !powerUpPanel.activeInHierarchy);
+        }
+
+        // Animate to remaining XP (non-level-up)
+        float targetFill = (float)currentXP / requiredXP;
+        yield return AnimateFill(targetFill);
+
+        isAnimating = false;
     }
 
     bool CheckForLevelUp()
@@ -45,43 +82,20 @@ public class ExperienceManager : MonoBehaviour
         return leveledUp;
     }
 
-    void UpdateInterface(bool levelUpOccurred)
+
+    IEnumerator AnimateFill(float target)
     {
-        levelText.text = "Lv " + currentLevel;
-        float targetFill = (float)currentXP / requiredXP;
-
-        if (fillCoroutine != null)
-            StopCoroutine(fillCoroutine);
-
-        fillCoroutine = StartCoroutine(AnimateFill(targetFill, levelUpOccurred));
-    }
-
-    IEnumerator AnimateFill(float targetFill, bool levelUpOccurred)
-    {
-        float duration = 0.5f;
-        float startFill = experienceFill.fillAmount;
+        float duration = 0.4f;
+        float start = experienceFill.fillAmount;
         float time = 0f;
 
-        // Animate to fill target
         while (time < duration)
         {
             time += Time.deltaTime;
-            experienceFill.fillAmount = Mathf.Lerp(startFill, targetFill, time / duration);
+            experienceFill.fillAmount = Mathf.Lerp(start, target, time / duration);
             yield return null;
         }
 
-        experienceFill.fillAmount = targetFill;
-
-        if (levelUpOccurred)
-        {
-            // 2. Pause while it's full
-            yield return new WaitForSeconds(0.5f);
-
-            // 3. Reset the bar visually
-            experienceFill.fillAmount = 0f;
-
-            // 4. Now show the power-up panel
-            FindAnyObjectByType<PowerUpManager>().ShowPowerUps();
-        }
+        experienceFill.fillAmount = target;
     }
 }
