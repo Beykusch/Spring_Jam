@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private CinematicManager cinMan; //ChatGPT
+
     private CharacterController controller;
     
     public float speed = 10f;
@@ -42,6 +44,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        cinMan = FindObjectOfType<CinematicManager>(); //ChatGPT
+
         controller = GetComponent<CharacterController>();
         originalHeight = controller.height;
         originalCenter = controller.center;
@@ -58,6 +62,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (cinMan != null && cinMan.IsInputBuffered()) return; //ChatGPT
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         if (isGrounded && velocity.y < 0)
@@ -72,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
         float currentSpeed = isCrouching ? crouchSpeed : speed;
         Vector3 horizontalVelocity = move * currentSpeed;
 
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        if (isGrounded && Input.GetButtonDown("Jump") && cinMan.inCinematic == false)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }

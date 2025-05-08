@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    private CinematicManager cinMan; //ChatGPT
+
     public List<MeshRenderer> hands = new List<MeshRenderer>();
     public int weaponDamage = 50;
     public bool isActiveWeapon;
@@ -75,10 +77,17 @@ public class Weapon : MonoBehaviour
         spreadIntensity = hipSpreadIntensity;
     }
 
+    private void Start() //ChatGPT
+    {
+        cinMan = FindObjectOfType<CinematicManager>();
+    }
+
 
     void Update()
     {
-        if(isActiveWeapon)
+        if (cinMan != null && cinMan.IsInputBuffered()) return; //ChatGPT
+
+        if (isActiveWeapon)
         {
             foreach(Transform child in transform)
             {
