@@ -105,7 +105,7 @@ public class Weapon : MonoBehaviour
             Weapon activeWeapon = WeaponManager.Instance.activeWeaponSlot.GetComponentInChildren<Weapon>();
             GetComponent<Outline>().enabled = false;
             
-            if (bulletsLeft == 0 && isShooting)
+            if (bulletsLeft == 0 && isShooting && Time.timeScale==1)
             {
                 SoundManager.Instance.emptySoundPistol.Play();
             }
@@ -120,7 +120,7 @@ public class Weapon : MonoBehaviour
             }
 
             //Reload
-            if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && isReloading == false && WeaponManager.Instance.CheckAmmoLeftFor(thisWeaponModel)>0)
+            if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && isReloading == false && WeaponManager.Instance.CheckAmmoLeftFor(thisWeaponModel)>0 && Time.timeScale==1)
             {
                 Reload();
             }
