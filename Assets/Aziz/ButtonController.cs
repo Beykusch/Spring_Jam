@@ -36,7 +36,12 @@ public class ButtonController : MonoBehaviour
     }
     public void WakeUp()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        StartCoroutine(DelayedSceneLoad());
+    }
+    private IEnumerator DelayedSceneLoad()
+    {
+        yield return new WaitForSeconds(0.6f); // Wait for 0.6 second
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Exit()
     {
