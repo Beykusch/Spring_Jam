@@ -4,6 +4,8 @@ using System.Collections;
 
 public class Dialogue : MonoBehaviour
 {
+    public AudioSource dialogueSFX;
+
     public GameObject cinObject;
     private CinematicManager cinMan;
 
@@ -21,6 +23,10 @@ public class Dialogue : MonoBehaviour
     }
     private void Update()
     {
+        if (textSpeak.text == lines[index])
+        {
+            dialogueSFX.Stop();
+        }
         if (index % 2 == 0)
         {
             textPerson.text = "Doctor: ";
@@ -37,6 +43,7 @@ public class Dialogue : MonoBehaviour
             }
             else
             {
+                dialogueSFX.Stop();
                 StopAllCoroutines();
                 textSpeak.text = lines[index];
             }
@@ -45,6 +52,7 @@ public class Dialogue : MonoBehaviour
     public void StartDialogue()
     {
         index = 0;
+        dialogueSFX.Play();
         StartCoroutine(TypeLine());
     }
     IEnumerator TypeLine()
@@ -58,6 +66,7 @@ public class Dialogue : MonoBehaviour
 
     void NextLine()
     {
+        
         if (index < lines.Length - 1)
         {
             index++;
@@ -68,6 +77,10 @@ public class Dialogue : MonoBehaviour
         {
             gameObject.SetActive(false);
             inDialogue = false;
+        }
+        if (inDialogue)
+        {
+            dialogueSFX.Play();
         }
     }
  }
