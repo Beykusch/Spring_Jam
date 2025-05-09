@@ -953,6 +953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
+  experienceOnDeath: 10
+  type: 1
 --- !u!114 &7972981195715049370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,7 +962,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8250048451775397910}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4d65e6ee9a38c5409a1082a5a89cbae, type: 3}
   m_Name: 
@@ -974,7 +976,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8250048451775397910}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2.74
+  m_Radius: 2.81834
   m_Speed: 1.5
   m_Acceleration: 20
   avoidancePriority: 50
@@ -983,7 +985,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 12.4
+  m_Height: 13.69639
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 3
