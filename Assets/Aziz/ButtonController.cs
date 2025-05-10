@@ -8,6 +8,8 @@ using TMPro;
 
 public class ButtonController : MonoBehaviour
 {
+    public GameObject dropdownSound;
+
     public AudioMixer audioMixer;
     public TMP_Dropdown resDropdown;
     public AudioSource audioSource;
@@ -16,6 +18,8 @@ public class ButtonController : MonoBehaviour
     Resolution[] resolutions;
     void Start()
     {
+        StartCoroutine(DropdownDelay());
+
         resolutions = Screen.resolutions;
         resDropdown.ClearOptions();
         List<string> options = new List<string>();
@@ -38,6 +42,12 @@ public class ButtonController : MonoBehaviour
     {
         StartCoroutine(DelayedSceneLoad());
     }
+    private IEnumerator DropdownDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        dropdownSound.SetActive(true);
+
+    }
     private IEnumerator DelayedSceneLoad()
     {
         yield return new WaitForSeconds(0.6f); // Wait for 0.6 second
@@ -45,6 +55,11 @@ public class ButtonController : MonoBehaviour
     }
     public void Exit()
     {
+        StartCoroutine(DelayedExit());
+    }
+    private IEnumerator DelayedExit()
+    {
+        yield return new WaitForSeconds(0.5f);
         Application.Quit();
     }
     public void SetResolution(int resIndex)
@@ -52,14 +67,14 @@ public class ButtonController : MonoBehaviour
         Resolution resolution=resolutions[resIndex];
         Screen.SetResolution(resolution.width, resolution.height,Screen.fullScreen);
     }
-    /*public void SetVolume(float volume)
-    {
-        audioMixer.SetFloat("Volume",volume);
-    }*/
     public void SetVolume(float volume)
     {
-        audioSource.volume = volume;
+        audioMixer.SetFloat("Volume",Mathf.Log10(volume)*20);
     }
+    /*public void SetVolume(float volume)
+    {
+        audioSource.volume = volume;
+    }*/
     public void SetGraphics(int graphicsIndex)
     {
         QualitySettings.SetQualityLevel(graphicsIndex);
