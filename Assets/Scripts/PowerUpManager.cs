@@ -14,6 +14,12 @@ public class PowerUpManager : MonoBehaviour
 
     private PowerUp[] currentChoices;
 
+    private readonly PowerUp.PowerUpType[] typePerButton = {
+        PowerUp.PowerUpType.Speedster,
+        PowerUp.PowerUpType.Tank,
+        PowerUp.PowerUpType.Damage
+    };
+
     void Start()
     {
         powerUpPanel.SetActive(false);
@@ -28,24 +34,39 @@ public class PowerUpManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        currentChoices = allPowerUps.OrderBy(x => Random.value).Take(3).ToArray();
+        currentChoices = new PowerUp[powerUpButtons.Length];
 
         for (int i = 0; i < powerUpButtons.Length; i++)
         {
             int index = i;
+            var targetType = typePerButton[i];
 
-            //Buttons UI elements
+            // Filter the power ups depending on the type
+            var matchingPowerUps = allPowerUps.Where(p => p.type == targetType).ToArray();
+
+            // Choose random
+            PowerUp chosen = matchingPowerUps[Random.Range(0, matchingPowerUps.Length)];
+            currentChoices[i] = chosen;
+
+            // UI elements
             TMP_Text nameText = powerUpButtons[i].transform.Find("PowerUpName").GetComponent<TMP_Text>();
             TMP_Text descText = powerUpButtons[i].transform.Find("PowerUpDescription").GetComponent<TMP_Text>();
             Image iconImage = powerUpButtons[i].transform.Find("PowerUpIcon")?.GetComponent<Image>();
+            Image buttonImage = powerUpButtons[i].GetComponent<Image>();
 
-            nameText.text = currentChoices[i].powerUpName;
-            descText.text = currentChoices[i].description;
+            nameText.text = chosen.powerUpName;
+            descText.text = chosen.description;
 
-            if (iconImage != null && currentChoices[i].icon != null)
+            if (iconImage != null && chosen.icon != null)
             {
-                iconImage.sprite = currentChoices[i].icon;
-                iconImage.gameObject.SetActive(true);
+                iconImage.sprite = chosen.icon;
+                iconImage.enabled = true;
+            }
+
+            if (buttonImage != null && chosen.buttonBackground != null)
+            {
+                buttonImage.sprite = chosen.buttonBackground;
+                buttonImage.type = Image.Type.Sliced;
             }
 
             powerUpButtons[i].onClick.RemoveAllListeners();

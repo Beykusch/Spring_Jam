@@ -15,5 +15,6 @@ MonoBehaviour:
   powerUpName: Fast
   description: Move Speed +10
   icon: {fileID: 0}
+  buttonBackground: {fileID: 21300000, guid: 062cb80921c92124e90a4c47a0d0a2c7, type: 3}
   type: 1
   value: 10

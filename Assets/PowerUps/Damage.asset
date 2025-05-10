@@ -15,5 +15,6 @@ MonoBehaviour:
   powerUpName: Muscle
   description: Damage +16
   icon: {fileID: 0}
+  buttonBackground: {fileID: 21300000, guid: 4422b187ac93c144ebe68ee504a6ced9, type: 3}
   type: 0
   value: 16
