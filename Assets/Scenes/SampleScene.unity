@@ -4322,10 +4322,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7972981195715049370, guid: 21e594a3317e16244ba1df39f44afae0, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8250048451775397910, guid: 21e594a3317e16244ba1df39f44afae0, type: 3}
       propertyPath: m_Name
       value: GuyEnemy
