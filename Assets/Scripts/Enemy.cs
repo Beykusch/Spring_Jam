@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     private NavMeshAgent navAgent;
 
+    private bool isDead = false;
+
     public enum EnemyType
     {
         Special,
@@ -29,11 +31,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     public void TakeDamage(int damageAmount)
     {
+        if (isDead) return;
+
         HP -= damageAmount;
         if (HP <= 0)
         {
+            isDead = true;
             animator.SetTrigger("DIE");
-            Destroy(gameObject);
+            GetComponent<CapsuleCollider>().enabled = false;
 
             ExperienceManager xpManager = FindAnyObjectByType<ExperienceManager>();
             if (xpManager != null)
