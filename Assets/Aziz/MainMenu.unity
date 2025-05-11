@@ -6586,7 +6586,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1956997010
 Canvas:
   m_ObjectHideFlags: 0
@@ -6643,7 +6643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 1956997007}
-  fadeDuration: 5
+  fadeInDuration: 5
+  fadeOutDuration: 1
   fadeIn: 1
 --- !u!1 &1970745147
 GameObject:
