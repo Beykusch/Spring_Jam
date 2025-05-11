@@ -13,6 +13,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource reloadingSoundPistol;
     public AudioSource reloadingSoundM4;
 
+    public AudioSource enemyHit;
+
     
 
     public AudioSource emptySoundPistol;
@@ -40,6 +42,11 @@ public class SoundManager : MonoBehaviour
                 break;
 
         }
+    }
+
+    public void PlayEnemyHitSound()
+    {
+        enemyHit.PlayOneShot(enemyHit.clip);
     }
 
     public void PlayReloadSound(WeaponModel weapon)

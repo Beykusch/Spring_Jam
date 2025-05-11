@@ -34,6 +34,9 @@ public class Enemy : MonoBehaviour
         if (isDead) return;
 
         HP -= damageAmount;
+
+        SoundManager.Instance.PlayEnemyHitSound();
+
         if (HP <= 0)
         {
             isDead = true;
