@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 1463931999572372279}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,6 +402,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+  sprintSpeedMultiplier: 1.4
   crouchSpeed: 6
   crouchHeight: 0.8
   playerCamera: {fileID: 6301501858361983398}
@@ -409,6 +410,8 @@ MonoBehaviour:
   cameraSmoothSpeed: 10
   playerBody: {fileID: 5384796118753818361}
   bodyCrouchScale: 0.5
+  WalkingSFX: {fileID: 0}
+  RunningSFX: {fileID: 0}
 --- !u!1 &5360515611016292986
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,10 +454,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 296976e0b375c4d47a362cc45cc220ea, type: 3}
+  m_Resource: {fileID: 8300000, guid: 296976e0b375c4d47a362cc45cc220ea, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.199
+  m_Volume: 0.051
   m_Pitch: 1
   Loop: 1
   Mute: 0
