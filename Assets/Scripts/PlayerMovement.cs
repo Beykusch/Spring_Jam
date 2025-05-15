@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -21,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 lastPosition = new Vector3(0f, 0f, 0f);
 
+    //Sprint
+    public float sprintSpeed = 14f;
+    bool isSprinting = false;
+
     //Crouch
     public float crouchSpeed = 6f;
     public float crouchHeight = 0.8f;
@@ -41,6 +46,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 originalBodyScale;
     private Vector3 originalBodyPosition;
 
+    //Audio
+    public AudioSource WalkingSFX;
+    public AudioSource RunningSFX;
 
     void Start()
     {
@@ -76,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
         float currentSpeed = isCrouching ? crouchSpeed : speed;
+        currentSpeed = isSprinting ? sprintSpeed : speed;
         Vector3 horizontalVelocity = move * currentSpeed;
 
         if (isGrounded && Input.GetButtonDown("Jump") && cinMan.inCinematic == false)
@@ -99,9 +108,17 @@ public class PlayerMovement : MonoBehaviour
         {
             isMoving = false;
         }
-
         lastPosition = transform.position;
 
+        //initiate sprint
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
         //initiate crouch
         if (Input.GetKeyDown(KeyCode.LeftControl))
         {
@@ -140,5 +157,30 @@ public class PlayerMovement : MonoBehaviour
             playerCamera.localPosition = Vector3.Lerp(playerCamera.localPosition, targetPosition, Time.deltaTime * cameraSmoothSpeed);
         }
 
+        // Walking/Running Sound Handling
+        if (isMoving)
+        {
+            if (isSprinting)
+            {
+                if (!RunningSFX.isPlaying)
+                {
+                    WalkingSFX.Stop();
+                    RunningSFX.Play();
+                }
+            }
+            else
+            {
+                if (!WalkingSFX.isPlaying)
+                {
+                    RunningSFX.Stop();
+                    WalkingSFX.Play();
+                }
+            }
+        }
+        else
+        {
+            if (WalkingSFX.isPlaying) WalkingSFX.Stop();
+            if (RunningSFX.isPlaying) RunningSFX.Stop();
+        }
     }
 }
