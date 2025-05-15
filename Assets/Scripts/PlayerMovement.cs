@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 lastPosition = new Vector3(0f, 0f, 0f);
 
     //Sprint
-    public float sprintSpeed = 14f;
+    public float sprintSpeedMultiplier = 1.4f;
+    float sprintSpeed=1f;
     bool isSprinting = false;
 
     //Crouch
@@ -84,6 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
         float currentSpeed = isCrouching ? crouchSpeed : speed;
+        sprintSpeed = speed * sprintSpeedMultiplier;
         currentSpeed = isSprinting ? sprintSpeed : speed;
         Vector3 horizontalVelocity = move * currentSpeed;
 
@@ -111,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
         lastPosition = transform.position;
 
         //initiate sprint
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.LeftControl))
         {
             isSprinting = true;
         }
