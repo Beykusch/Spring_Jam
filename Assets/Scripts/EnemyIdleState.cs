@@ -7,7 +7,7 @@ public class EnemyIdleState : StateMachineBehaviour
 
     Transform player;
 
-    public float detectionAreaRadius = 18f;
+    public float detectionAreaRadius = 23f;
 
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

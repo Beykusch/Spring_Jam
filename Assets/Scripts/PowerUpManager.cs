@@ -94,7 +94,9 @@ public class PowerUpManager : MonoBehaviour
                 FindAnyObjectByType<PlayerMovement>().speed += powerUp.value;
                 break;
             case PowerUp.PowerUpType.Tank:
-                FindAnyObjectByType<HealthBar>().slider.maxValue += (int)powerUp.value;
+                Player player = FindAnyObjectByType<Player>();
+                player.HP += (int)powerUp.value;
+                player.healthBar.SetHealth(player.HP);
                 break;
             case PowerUp.PowerUpType.Damage:
                 Weapon[] allWeapons = Resources.FindObjectsOfTypeAll<Weapon>();

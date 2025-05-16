@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     private NavMeshAgent navAgent;
 
+    public Collider attackCollider;
+
     private bool isDead = false;
 
     public enum EnemyType
@@ -55,4 +57,18 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, 18f);
+
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, 23f);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 25f);
+
+
+    }
 }

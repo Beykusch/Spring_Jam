@@ -7,13 +7,14 @@ public class EnemyAttackState : StateMachineBehaviour
     Transform player;
     NavMeshAgent agent;
 
-    float stopAttackingDistance = 10f;
+    float stopAttackingDistance = 15f;
 
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
+
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -32,9 +33,13 @@ public class EnemyAttackState : StateMachineBehaviour
     private void LookAtPlayer()
     {
         Vector3 direction = player.position - agent.transform.position;
-        agent.transform.rotation = Quaternion.LookRotation(direction);
+        direction.y = 0f; //Only horizontal
 
-        var yRotation = agent.transform.eulerAngles.y;
-        agent.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+        if (direction != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(direction);
+            agent.transform.rotation = Quaternion.Slerp(agent.transform.rotation, targetRotation, Time.deltaTime * 5f);
+        }
     }
+
 }

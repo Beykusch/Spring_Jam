@@ -11,7 +11,7 @@ public class EnemyPatrollingState : StateMachineBehaviour
     Transform player;
     NavMeshAgent agent;
 
-    public float detectionArea = 18f;
+    public float detectionArea = 23f;
     public float patrolSpeed = 3.5f;
 
     List<Transform> waypointsList = new List<Transform>();

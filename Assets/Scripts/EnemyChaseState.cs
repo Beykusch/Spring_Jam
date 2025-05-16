@@ -8,8 +8,8 @@ public class EnemyChaseState : StateMachineBehaviour
 
     public float chaseSpeed = 5f;
 
-    public float stopChasingDistance = 21f;
-    public float attackingDistance = 12f;
+    public float stopChasingDistance = 25f;
+    public float attackingDistance = 18f;
 
 
 

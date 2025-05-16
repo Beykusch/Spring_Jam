@@ -9,6 +9,9 @@ TagManager:
   - Enemy
   - Card1
   - Door1
+  - Door
+  - Waypoints
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
