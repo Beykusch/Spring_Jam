@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
 
     private NavMeshAgent navAgent;
 
-    public Collider attackCollider;
 
     private bool isDead = false;
 
