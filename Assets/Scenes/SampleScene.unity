@@ -2070,25 +2070,6 @@ Transform:
   - {fileID: 136000586}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2000752086 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3622830142774731191, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
-  m_PrefabInstance: {fileID: 2207474238321379823}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2000752091
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000752086}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a53d0b65faec6c42bede105e227d9d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: 100
-  healthBar: {fileID: 1664520632}
 --- !u!1001 &245340042151086779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2368,6 +2349,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4462100176180472474, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1664520632}
     - target: {fileID: 5171037045273050776, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
       propertyPath: rifleImage
       value: 
@@ -2427,10 +2412,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3622830142774731191, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2000752091}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
 --- !u!1001 &2548198760579817442
 PrefabInstance:
