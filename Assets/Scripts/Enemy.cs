@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private int experienceOnDeath = 10;
     public EnemyType type;
 
+    public Collider attackCollider;
+
     private Animator animator;
 
     private NavMeshAgent navAgent;
@@ -54,6 +56,16 @@ public class Enemy : MonoBehaviour
         {
             animator.SetTrigger("DAMAGE");
         }
+    }
+
+    public void EnableAttackCollider()
+    {
+        attackCollider.enabled = true;
+    }
+
+    public void DisableAttackCollider()
+    {
+        attackCollider.enabled = false;
     }
 
 

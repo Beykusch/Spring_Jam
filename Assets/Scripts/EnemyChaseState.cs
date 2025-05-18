@@ -31,11 +31,13 @@ public class EnemyChaseState : StateMachineBehaviour
         if (distanceFromPlayer > stopChasingDistance)
         {
             animator.SetBool("isChasing", false);
+            animator.SetBool("isAttacking", false); // guarantie
         }
 
-        if (distanceFromPlayer < attackingDistance)
+        if (distanceFromPlayer < attackingDistance && !animator.GetBool("isAttacking"))
         {
             animator.SetBool("isAttacking", true);
+            animator.SetBool("isChasing", false); // no attack and chase at the same time
         }
     }
 
