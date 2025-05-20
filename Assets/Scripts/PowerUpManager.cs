@@ -6,6 +6,10 @@ using TMPro;
 
 public class PowerUpManager : MonoBehaviour
 {
+    public Animator powerUpSlide;
+
+    public AudioSource powerUpSFX;
+
     public GameObject middlePoint;
     public GameObject powerUpPanel;
     public GameObject expFill;
@@ -24,12 +28,24 @@ public class PowerUpManager : MonoBehaviour
     {
         powerUpPanel.SetActive(false);
     }
+    private void Update()
+    {
+        if (powerUpPanel.activeSelf && powerUpSlide != null)
+        {
+            powerUpSlide.Update(Time.unscaledDeltaTime);
+        }
+    }
 
     public void ShowPowerUps()
     {
+        powerUpSFX.Play();
+
         Time.timeScale = 0f;
         middlePoint.SetActive(false);
         powerUpPanel.SetActive(true);
+
+        Debug.Log("Is animator null? " + (powerUpSlide == null));
+        powerUpSlide.SetTrigger("PowerSlide");
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
