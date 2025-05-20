@@ -15,6 +15,12 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource enemyHit;
 
+    public AudioSource playerChannel;
+    public AudioClip playerHurt;
+    public AudioClip playerDie;
+
+    public AudioClip gameOverMusic;
+
     
 
     public AudioSource emptySoundPistol;

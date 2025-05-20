@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
 
     public GameObject bloodyScreen;
 
+    public bool isDead = false;
 
     void Start()
     {
@@ -26,16 +27,22 @@ public class Player : MonoBehaviour
         {
             print("Player Dead");
             PlayerDead();
+            isDead = true;
         }
         else
         {
             print("Player Hit");
             StartCoroutine(BloodyScreenEffect());
+            SoundManager.Instance.playerChannel.PlayOneShot(SoundManager.Instance.playerHurt);
         }
     }
 
     private void PlayerDead()
     {
+        SoundManager.Instance.playerChannel.PlayOneShot(SoundManager.Instance.playerDie);
+        SoundManager.Instance.playerChannel.clip = SoundManager.Instance.gameOverMusic;
+        SoundManager.Instance.playerChannel.PlayDelayed(1.3f);
+
         GetComponent<MouseMovement>().enabled = false;
         GetComponent<PlayerMovement>().enabled = false;
 
@@ -82,7 +89,11 @@ public class Player : MonoBehaviour
     {
         if (other.CompareTag("EnemyBullet"))
         {
-            TakeDamage(other.gameObject.GetComponent<EnemyBullet>().damage);
+            if(isDead == false)
+            {
+                TakeDamage(other.gameObject.GetComponent<EnemyBullet>().damage);
+            }
+            
         }
     }
 }

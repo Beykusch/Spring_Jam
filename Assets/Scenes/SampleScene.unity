@@ -846,6 +846,11 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!82 &419120077 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6697770533719885514, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
+  m_PrefabInstance: {fileID: 2207474238321379823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &452369561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8440839488192773247, guid: bcca80bd60dabe14989489a51daef346, type: 3}
@@ -856,7 +861,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2020428816943956225, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
   m_PrefabInstance: {fileID: 3201981545196713196}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &569283123
+--- !u!82 &569283130
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -866,10 +871,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1ed33656a0570b94bab0dc77151a4ffc, type: 3}
-  m_Resource: {fileID: 8300000, guid: 1ed33656a0570b94bab0dc77151a4ffc, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.318
+  m_Volume: 0.669
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1289,36 +1294,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &676055873 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8641105592036515810, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
-  m_PrefabInstance: {fileID: 3201981545196713196}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &676055876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 676055873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29c2aabef7f2c045a005fe5673aec49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpSlide: {fileID: 0}
-  powerUpSFX: {fileID: 0}
-  middlePoint: {fileID: 8808541545138602770}
-  powerUpPanel: {fileID: 962740479}
-  expFill: {fileID: 1116053736}
-  powerUpButtons:
-  - {fileID: 889318192}
-  - {fileID: 741263364}
-  - {fileID: 1042123774}
-  allPowerUps:
-  - {fileID: 11400000, guid: cb5e759e20196a54ba7e4fdabd6d1ec5, type: 2}
-  - {fileID: 11400000, guid: 30323886736c8674ca111dd29f270cae, type: 2}
-  - {fileID: 11400000, guid: 08403ece169bc9241841aeb8885310a5, type: 2}
 --- !u!114 &741263364 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8298833862815542548, guid: bcca80bd60dabe14989489a51daef346, type: 3}
@@ -1382,6 +1357,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &883632619 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5413120844746987739, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
+  m_PrefabInstance: {fileID: 2207474238321379823}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &889318192 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6380095642654390361, guid: bcca80bd60dabe14989489a51daef346, type: 3}
@@ -2312,6 +2292,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1463931999572372279, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
+      propertyPath: RunningSFX
+      value: 
+      objectReference: {fileID: 419120077}
+    - target: {fileID: 1463931999572372279, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
+      propertyPath: WalkingSFX
+      value: 
+      objectReference: {fileID: 883632619}
     - target: {fileID: 3622830142774731191, guid: 51d1801e5d9f925418e8117a82593ae2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2465,10 +2453,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1389336234094198464, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
-      propertyPath: m_Volume
-      value: 0.24
-      objectReference: {fileID: 0}
     - target: {fileID: 3205960170359159214, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
       propertyPath: middleDot
       value: 
@@ -2477,14 +2461,34 @@ PrefabInstance:
       propertyPath: ammoDisplay
       value: 
       objectReference: {fileID: 1178650366}
+    - target: {fileID: 5066636321695340587, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: expFill
+      value: 
+      objectReference: {fileID: 1116053736}
+    - target: {fileID: 5066636321695340587, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: middlePoint
+      value: 
+      objectReference: {fileID: 8808541545138602770}
+    - target: {fileID: 5066636321695340587, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: powerUpPanel
+      value: 
+      objectReference: {fileID: 962740479}
+    - target: {fileID: 5066636321695340587, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: 'powerUpButtons.Array.data[0]'
+      value: 
+      objectReference: {fileID: 889318192}
+    - target: {fileID: 5066636321695340587, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: 'powerUpButtons.Array.data[1]'
+      value: 
+      objectReference: {fileID: 741263364}
+    - target: {fileID: 5066636321695340587, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: 'powerUpButtons.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1042123774}
     - target: {fileID: 5351491627135915815, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
-    - target: {fileID: 5396343875530851921, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
-      propertyPath: bloodSprayEffect
-      value: 
-      objectReference: {fileID: 711366717957131853, guid: abf106f6f6ca7aa4390daffcfe8ac4ee, type: 3}
     - target: {fileID: 6637683952585128984, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2538,19 +2542,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 164336036}
     - target: {fileID: 7979821719940215052, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
-      propertyPath: enemyHit
+      propertyPath: playerDie
       value: 
-      objectReference: {fileID: 569283123}
+      objectReference: {fileID: 8300000, guid: 80135e6eed9ffe448a4ba11f54d15f50, type: 3}
+    - target: {fileID: 7979821719940215052, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: playerHit
+      value: 
+      objectReference: {fileID: 8300000, guid: dd7e47b7a8f7a434fbd5115ba8ef2f4d, type: 3}
+    - target: {fileID: 7979821719940215052, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: playerHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: dd7e47b7a8f7a434fbd5115ba8ef2f4d, type: 3}
+    - target: {fileID: 7979821719940215052, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: gameOverMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: a768ae84bda3b39419f446b439c5a470, type: 3}
+    - target: {fileID: 7979821719940215052, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
+      propertyPath: playerChannel
+      value: 
+      objectReference: {fileID: 569283130}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2020428816943956225, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 569283123}
-    - targetCorrespondingSourceObject: {fileID: 8641105592036515810, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 676055876}
+      addedObject: {fileID: 569283130}
   m_SourcePrefab: {fileID: 100100000, guid: 4a1ae9c46f95afe4b9ac1efd2f868d8b, type: 3}
 --- !u!1001 &3897425057217126799
 PrefabInstance:
