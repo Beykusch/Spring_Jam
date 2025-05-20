@@ -18,13 +18,15 @@ public class EnemyChaseState : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
 
+        agent.updateRotation = true;
+
         agent.speed = chaseSpeed;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent.SetDestination(player.position);
-        animator.transform.LookAt(player);
+        
 
         float distanceFromPlayer = Vector3.Distance(player.position, animator.transform.position);
 

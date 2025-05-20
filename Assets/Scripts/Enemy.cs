@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,6 +9,9 @@ public class Enemy : MonoBehaviour
     public EnemyType type;
 
     public Collider attackCollider;
+
+    public Transform waypointParent;
+    [HideInInspector] public List<Transform> waypointsList = new List<Transform>();
 
     private Animator animator;
 

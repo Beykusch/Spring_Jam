@@ -5,12 +5,11 @@ using UnityEngine.AI;
 
 public class EnemyPatrollingState : StateMachineBehaviour
 {
-    public string waypointParentName = "WaypointsEnemy1"; // change this part for spesific enemy
-
     private Transform player;
     private NavMeshAgent agent;
-    private List<Transform> waypointsList = new List<Transform>();
+    private Enemy enemyData;
     private float timer;
+
     public float patrolSpeed = 2f;
     public float patrollingTime = 6f;
     public float detectionArea = 10f;
@@ -19,37 +18,41 @@ public class EnemyPatrollingState : StateMachineBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
+        enemyData = animator.GetComponent<Enemy>();
+
         agent.speed = patrolSpeed;
         timer = 0;
-        waypointsList.Clear();
 
-        // Find Waypoint object of each enemy
-        Transform waypointCluster = animator.transform.Find(waypointParentName);
-        if (waypointCluster != null)
+        // Entry waypoints
+        if (enemyData.waypointsList.Count == 0)
         {
-            foreach (Transform t in waypointCluster)
+            foreach (Transform t in enemyData.waypointParent)
             {
-                waypointsList.Add(t);
+                enemyData.waypointsList.Add(t);
             }
+        }
 
-            Vector3 nextPosition = waypointsList[Random.Range(0, waypointsList.Count)].position;
+        if (enemyData.waypointsList.Count > 0)
+        {
+            Vector3 nextPosition = enemyData.waypointsList[Random.Range(0, enemyData.waypointsList.Count)].position;
             agent.SetDestination(nextPosition);
         }
         else
         {
-            Debug.LogWarning("Waypoint parent not found: " + waypointParentName);
+            Debug.LogError("Waypoint list is empty in " + animator.gameObject.name);
         }
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (agent.remainingDistance <= agent.stoppingDistance && enemyData.waypointsList.Count > 0)
         {
-            agent.SetDestination(waypointsList[Random.Range(0, waypointsList.Count)].position); 
+            Vector3 nextPosition = enemyData.waypointsList[Random.Range(0, enemyData.waypointsList.Count)].position;
+            agent.SetDestination(nextPosition);
         }
 
         timer += Time.deltaTime;
-        if(timer > patrollingTime)
+        if (timer > patrollingTime)
         {
             animator.SetBool("isPatrolling", false);
         }
@@ -59,7 +62,6 @@ public class EnemyPatrollingState : StateMachineBehaviour
         {
             animator.SetBool("isChasing", true);
         }
-
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

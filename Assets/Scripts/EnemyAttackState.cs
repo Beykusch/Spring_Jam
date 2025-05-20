@@ -15,6 +15,17 @@ public class EnemyAttackState : StateMachineBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
+        Transform model = agent.transform.Find("Model");
+        agent.updateRotation = false;
+
+        Vector3 direction = (player.position - agent.transform.position).normalized;
+        direction.y = 0f;
+        if (direction != Vector3.zero)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(direction);
+            model.rotation = lookRotation; // Veya model.transform.rotation
+        }
+
         float sqrStopAttackingDistance = 15f * 15f;
         float distanceSqr = (player.position - animator.transform.position).sqrMagnitude;
         if (distanceSqr > sqrStopAttackingDistance)
@@ -38,15 +49,28 @@ public class EnemyAttackState : StateMachineBehaviour
 
     }
 
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        agent.updateRotation = true;
+    }
+
     private void LookAtPlayer()
     {
-        Vector3 direction = (player.position - agent.transform.position).normalized;
+        Transform model = agent.transform.Find("Model");
+
+        if (model == null)
+        {
+            Debug.LogError("Model child not found under enemy.");
+            return;
+        }
+
+        Vector3 direction = (player.position - model.position).normalized;
         direction.y = 0f;
 
         if (direction != Vector3.zero)
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            agent.transform.rotation = Quaternion.RotateTowards(agent.transform.rotation, lookRotation, Time.deltaTime * 200f);
+            model.rotation = Quaternion.RotateTowards(model.rotation, lookRotation, Time.deltaTime * 70f);
         }
     }
 

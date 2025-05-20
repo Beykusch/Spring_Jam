@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9516c20a4eed8c46975fdb29ba0584f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleTime: 4
+  idleTime: 3
   detectionAreaRadius: 25
 --- !u!1101 &-1722532833365631752
 AnimatorStateTransition:
@@ -479,9 +479,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff76641499872144a8202ada67b3ade6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrollingTime: 10
-  detectionArea: 23
+  waypointParentName: WaypointsGuyEnemy
   patrolSpeed: 3.5
+  patrollingTime: 6
+  detectionArea: 23
 --- !u!1101 &7582441670055573411
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
