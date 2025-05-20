@@ -5,36 +5,40 @@ using UnityEngine.AI;
 
 public class EnemyPatrollingState : StateMachineBehaviour
 {
-    float timer;
-    public float patrollingTime = 10f;
+    public string waypointParentName = "WaypointsEnemy1"; // change this part for spesific enemy
 
-    Transform player;
-    NavMeshAgent agent;
-
-    public float detectionArea = 23f;
-    public float patrolSpeed = 3.5f;
-
-    List<Transform> waypointsList = new List<Transform>();
-    
+    private Transform player;
+    private NavMeshAgent agent;
+    private List<Transform> waypointsList = new List<Transform>();
+    private float timer;
+    public float patrolSpeed = 2f;
+    public float patrollingTime = 6f;
+    public float detectionArea = 10f;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
-
         agent.speed = patrolSpeed;
         timer = 0;
+        waypointsList.Clear();
 
-        GameObject waypointCluster = GameObject.FindGameObjectWithTag("Waypoints");
-        foreach(Transform t in waypointCluster.transform)
+        // Find Waypoint object of each enemy
+        Transform waypointCluster = animator.transform.Find(waypointParentName);
+        if (waypointCluster != null)
         {
-            waypointsList.Add(t);
+            foreach (Transform t in waypointCluster)
+            {
+                waypointsList.Add(t);
+            }
+
+            Vector3 nextPosition = waypointsList[Random.Range(0, waypointsList.Count)].position;
+            agent.SetDestination(nextPosition);
         }
-
-        Vector3 nextPosition = waypointsList[Random.Range(0, waypointsList.Count)].position;
-        agent.SetDestination(nextPosition);
-
-
+        else
+        {
+            Debug.LogWarning("Waypoint parent not found: " + waypointParentName);
+        }
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -3,7 +3,7 @@ using UnityEngine;
 public class EnemyIdleState : StateMachineBehaviour
 {
     float timer;
-    public float idleTime = 0f;
+    public float idleTime = 3f;
 
     Transform player;
 
