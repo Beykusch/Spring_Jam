@@ -1435,6 +1435,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c29c2aabef7f2c045a005fe5673aec49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUpSlide: {fileID: 0}
   powerUpSFX: {fileID: 0}
   middlePoint: {fileID: 8808541545138602770}
   powerUpPanel: {fileID: 962740479}
