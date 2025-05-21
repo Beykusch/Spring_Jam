@@ -152,8 +152,9 @@ MonoBehaviour:
   reloadingSoundM4: {fileID: 472521752375916392}
   enemyHit: {fileID: 1139086483850503416}
   playerChannel: {fileID: 0}
-  playerHit: {fileID: 0}
+  playerHurt: {fileID: 0}
   playerDie: {fileID: 0}
+  gameOverMusic: {fileID: 0}
   emptySoundPistol: {fileID: 8693731560646948317}
 --- !u!82 &1389336234094198464
 AudioSource:
@@ -812,7 +813,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1558345355438411244}
   - component: {fileID: 680329391061420153}
-  - component: {fileID: 5066636321695340587}
   m_Layer: 0
   m_Name: InteractionManager
   m_TagString: Untagged
@@ -854,28 +854,3 @@ MonoBehaviour:
   PickedUpSFX: {fileID: 0}
   LockedText: {fileID: 0}
   PickUpKeyText: {fileID: 0}
---- !u!114 &5066636321695340587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8641105592036515810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29c2aabef7f2c045a005fe5673aec49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUpSlide: {fileID: 0}
-  powerUpSFX: {fileID: 0}
-  middlePoint: {fileID: 0}
-  powerUpPanel: {fileID: 0}
-  expFill: {fileID: 0}
-  powerUpButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  allPowerUps:
-  - {fileID: 11400000, guid: cb5e759e20196a54ba7e4fdabd6d1ec5, type: 2}
-  - {fileID: 11400000, guid: 30323886736c8674ca111dd29f270cae, type: 2}
-  - {fileID: 11400000, guid: 08403ece169bc9241841aeb8885310a5, type: 2}
