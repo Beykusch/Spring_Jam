@@ -49,7 +49,7 @@ public class ExperienceManager : MonoBehaviour
             // Step 3: Level up
             currentXP -= requiredXP;
             currentLevel++;
-            levelText.text = "Lv " + currentLevel;
+            levelText.text = "" + currentLevel;
 
             // Step 4: Reset bar visually
             experienceFill.fillAmount = 0f;
