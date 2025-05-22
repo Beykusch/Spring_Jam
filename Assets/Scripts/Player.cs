@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public HealthBar healthBar;
 
     public GameObject bloodyScreen;
+    public GameObject gameOver;
 
     public bool isDead = false;
 
@@ -48,6 +49,17 @@ public class Player : MonoBehaviour
 
         GetComponentInChildren<Animator>().enabled = true;
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        gameOver.SetActive(true);
+        StartCoroutine(StopGame());
+    }
+
+    private IEnumerator StopGame()
+    {
+        yield return new WaitForSeconds(1.2f);
+        Time.timeScale = 0;
     }
 
     private IEnumerator BloodyScreenEffect()
