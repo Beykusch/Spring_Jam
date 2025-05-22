@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public Animator restartAnim;
+
     public int HP = 100;
     public HealthBar healthBar;
 
@@ -16,6 +18,13 @@ public class Player : MonoBehaviour
     void Start()
     {
         healthBar.SetMaxHealth(HP);
+    }
+    private void Update()
+    {
+        if (gameOver.activeSelf && restartAnim != null)
+        {
+            restartAnim.Update(Time.unscaledDeltaTime);
+        }
     }
 
     public void TakeDamage(int damageAmount)

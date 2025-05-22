@@ -1,0 +1,2049 @@
+fileFormatVersion: 2
+guid: 6b93b5298976b1c49a903810a8026bb3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RestartVideo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4686
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff1ba8e50b53c147a6e027177dd369a
+      internalID: 1118596145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_1
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 4686
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cac7ae94f6440f48a1d2844677c1a6f
+      internalID: -1059672028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_2
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 4686
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f3c5d38a1da2e4b922e5aee86a32b8
+      internalID: -1435518465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_3
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4686
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ec9e69e5455294d9298bed777a2cd9
+      internalID: -801440103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_4
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 4686
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e115a0cf5d206f94dbcdfba3e4e66f5f
+      internalID: 1059392204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_5
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 4686
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f4e8f79394bda40a15bf86500ec169
+      internalID: -1843683400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_6
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4686
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f7a1eaf957e93e4bb362d1435eaa4a4
+      internalID: 522340164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4260
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7148124342de94c4ab146cae997266c7
+      internalID: -677456324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 4260
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 907fb60c6d794cc4d9ba71b605dc7fe1
+      internalID: -750800574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_9
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 4260
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532cd3bd30d58534086aef5654a456b4
+      internalID: 687210951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_10
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4260
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6927b41fc7f0bf646be329ae18055e19
+      internalID: 1855463901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_11
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 4260
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4941029c470334299db11d89e8774a
+      internalID: -1790685682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_12
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 4260
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2f416a5fa216a469b010bda7a60fb4
+      internalID: 410962474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_13
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4260
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553ae3f0df22e3e4eb848032b91928ca
+      internalID: -1290261503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3834
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a194a4402f775847a8fbc7dab4b9cb6
+      internalID: 1220772391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 3834
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f99b812daba2ed4a89e9b8ab852e543
+      internalID: 602442612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3834
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6524e1c250a8707458e3182949aec8b6
+      internalID: -942463930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_17
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3834
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b5c98392b27d843b577337d861bd00
+      internalID: -304625440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_18
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3834
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea60f3d587aff694e93275ae5b23604e
+      internalID: 1086490141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_19
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 3834
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb7dfeabba8f5545bb91fe16415b55f
+      internalID: 1851549850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_20
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3834
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b0bb11f9344644f83cbe17e4656208
+      internalID: -612776672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3408
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c08366270a8854992798769d0c95eb
+      internalID: 1963364164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_22
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 3408
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c264b5be534814e9781ff110fbb7f7
+      internalID: 1096644030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_23
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 3408
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c670089cdea66cf40852a5b3e5e2eb5e
+      internalID: -1227614361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_24
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3408
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40261fe77a2145f48a27bf7659e0b538
+      internalID: -1878406970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_25
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 3408
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5b7e3c340f75b489765bc38f0afcc7
+      internalID: 1623272881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_26
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 3408
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3f0b8ccff443a4596aa994c22b0957
+      internalID: 1693392019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_27
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3408
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35707dc3f48c02c4ebb280c7ab45df45
+      internalID: 924889684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2982
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab314e55ad423341975673615a299a3
+      internalID: -1232748267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_29
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2982
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a3cfe7444d93964a9b90c6bac26904a
+      internalID: 1696605385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_30
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2982
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87aec44a8763ed4bb70653036540227
+      internalID: -830479185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_31
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2982
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680c7d15a1a29144ea4f326ce1da564c
+      internalID: 1679356028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_32
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2982
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15cedba7921bfc45af657a9377ba3a0
+      internalID: -1626432533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_33
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2982
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db40853d55307874d8c8a5bf073950fe
+      internalID: -784621587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_34
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2982
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e1c91e405ae69439fd14fad2be52c3
+      internalID: -1845420890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2556
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f45163d92b3fe4caa357f0ea323eb0
+      internalID: 2012791118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_36
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2556
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3c1f291e936674eb13c104fe6ffe82
+      internalID: 1556145723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_37
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2556
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a131e6c192198ec41be4143593724971
+      internalID: -2018893681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_38
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2556
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60439f73f45490244a14dca3664d0b6d
+      internalID: -1131809805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_39
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2556
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eabf42f18564591499f45811304eecad
+      internalID: 2104985696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_40
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2556
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3cd94e8c8b5b44cb8b5555082f6b91
+      internalID: -1500754837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_41
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2556
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a785b74ae1e97cf499ae46ab793a74ae
+      internalID: -1624119434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2130
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9378754b4919c2409b40cf59daaea5e
+      internalID: -894083448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 2130
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b17752b71108e41bc377fd27974366
+      internalID: -326013098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_44
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 2130
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b645375de4769514790dc93f106725a9
+      internalID: 1284160243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_45
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2130
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cc279ce5908fc4c8a63448f6be1221
+      internalID: 766955450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_46
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 2130
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52767568e53cb114bb83908d1ef3ec50
+      internalID: -257249399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_47
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 2130
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f5584ab0b4c86489e595947fc15cad
+      internalID: -841090059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_48
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2130
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f3cf1312725d541afd29f472a1d830
+      internalID: 290438083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1704
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534da656d42f1e34db036d6f294cf82d
+      internalID: 208227631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_50
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1704
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e66401e02d00ae42961809ed3cfdf7e
+      internalID: 1181018371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_51
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1704
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf672affa15b17448def1595b287b74
+      internalID: -1445530115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_52
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1704
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33149249adaa7ec47ba33e52fe5ed931
+      internalID: 1357757225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_53
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1704
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6472beaa93a540047a23002065f9c28d
+      internalID: -799905238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_54
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1704
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a72d801dfcdec14281a0538b72f2e72
+      internalID: -1437332039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_55
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1704
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f235d30ab0fb634ea6f79d951133df8
+      internalID: 1598742033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1278
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 373a8ebedaf57714fbff43af3239fab0
+      internalID: 1376377098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_57
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1278
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d1cc931b6c301645a7f664a3463f65a
+      internalID: 341666705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_58
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1278
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8735fac0a8453f745bdf31152c8632a8
+      internalID: -24733935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_59
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1278
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0064ea5d6c9d823459d41d01f9e14c7e
+      internalID: -1144735296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_60
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1278
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d92e0bdef321c41b89f6dcdbcb41e5
+      internalID: -1129807160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_61
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1278
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3beb8036d72f5fa45890674f6d26e236
+      internalID: 851271533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_62
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1278
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3c04c20e276a84788074ea80f1e97d
+      internalID: 1562320757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 852
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d820ad3db27b054eb0a84bd29232a61
+      internalID: -853697080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_64
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 852
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49be7c703de64148bc37ba065cece31
+      internalID: 1582023016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_65
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 852
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfad76f086c128a4ab9db7b57a80e861
+      internalID: 1416745274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_66
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 852
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c74206f082db24b8ec037701fc0205
+      internalID: -2047161788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_67
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 852
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14da00592e5ac9c439521bae21432a1d
+      internalID: 584223394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_68
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 852
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d6c2a3fa08bbc43a7b759d28d63db2
+      internalID: 502552606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_69
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 852
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e4e9bb6e39f6c47811e727c08ce3a1
+      internalID: 1318840279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 426
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b1017af3434a2544bd399d305757772
+      internalID: -126074144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_71
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 426
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c742d23a7f047d84b8270da80a29e746
+      internalID: 395004996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_72
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 426
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1b0b04b40eff543ab67082c1c72c93
+      internalID: 366857325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_73
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 426
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef87b96590a06664eb01444d91dfd297
+      internalID: 1875989728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_74
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 426
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6bf1e3a2d33684c81f3656b7604f5c
+      internalID: 1019693176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_75
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 426
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d38eaf77a76f604098609b7bb09ac49
+      internalID: 1964899678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_76
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 426
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caaac4e73527ef44c8c52c88e5b7e14d
+      internalID: -1389844547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86259f256222334499c9a472b504ff43
+      internalID: -400499176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_78
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fc47cbdf342804ca16a23200309c75
+      internalID: -486798987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_79
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8d47248fee25a419b2268a3333bd7f
+      internalID: 385180898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_80
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04fc981dfcb870c47ab4e14e092e60fd
+      internalID: 1830520452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_81
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f88cc4c9d9b885c4c93dfacea9a2becd
+      internalID: 741909768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_82
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae79ff4f9fecab048a737efa7156b68c
+      internalID: 1152962204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RestartVideo_83
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 0
+        width: 640
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45ea06b1884c8e4797041d92f4bf0bd
+      internalID: -1587453538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5b8e52cb20554004c8d198500b28e874
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      RestartVideo_0: 1118596145
+      RestartVideo_1: -1059672028
+      RestartVideo_10: 1855463901
+      RestartVideo_11: -1790685682
+      RestartVideo_12: 410962474
+      RestartVideo_13: -1290261503
+      RestartVideo_14: 1220772391
+      RestartVideo_15: 602442612
+      RestartVideo_16: -942463930
+      RestartVideo_17: -304625440
+      RestartVideo_18: 1086490141
+      RestartVideo_19: 1851549850
+      RestartVideo_2: -1435518465
+      RestartVideo_20: -612776672
+      RestartVideo_21: 1963364164
+      RestartVideo_22: 1096644030
+      RestartVideo_23: -1227614361
+      RestartVideo_24: -1878406970
+      RestartVideo_25: 1623272881
+      RestartVideo_26: 1693392019
+      RestartVideo_27: 924889684
+      RestartVideo_28: -1232748267
+      RestartVideo_29: 1696605385
+      RestartVideo_3: -801440103
+      RestartVideo_30: -830479185
+      RestartVideo_31: 1679356028
+      RestartVideo_32: -1626432533
+      RestartVideo_33: -784621587
+      RestartVideo_34: -1845420890
+      RestartVideo_35: 2012791118
+      RestartVideo_36: 1556145723
+      RestartVideo_37: -2018893681
+      RestartVideo_38: -1131809805
+      RestartVideo_39: 2104985696
+      RestartVideo_4: 1059392204
+      RestartVideo_40: -1500754837
+      RestartVideo_41: -1624119434
+      RestartVideo_42: -894083448
+      RestartVideo_43: -326013098
+      RestartVideo_44: 1284160243
+      RestartVideo_45: 766955450
+      RestartVideo_46: -257249399
+      RestartVideo_47: -841090059
+      RestartVideo_48: 290438083
+      RestartVideo_49: 208227631
+      RestartVideo_5: -1843683400
+      RestartVideo_50: 1181018371
+      RestartVideo_51: -1445530115
+      RestartVideo_52: 1357757225
+      RestartVideo_53: -799905238
+      RestartVideo_54: -1437332039
+      RestartVideo_55: 1598742033
+      RestartVideo_56: 1376377098
+      RestartVideo_57: 341666705
+      RestartVideo_58: -24733935
+      RestartVideo_59: -1144735296
+      RestartVideo_6: 522340164
+      RestartVideo_60: -1129807160
+      RestartVideo_61: 851271533
+      RestartVideo_62: 1562320757
+      RestartVideo_63: -853697080
+      RestartVideo_64: 1582023016
+      RestartVideo_65: 1416745274
+      RestartVideo_66: -2047161788
+      RestartVideo_67: 584223394
+      RestartVideo_68: 502552606
+      RestartVideo_69: 1318840279
+      RestartVideo_7: -677456324
+      RestartVideo_70: -126074144
+      RestartVideo_71: 395004996
+      RestartVideo_72: 366857325
+      RestartVideo_73: 1875989728
+      RestartVideo_74: 1019693176
+      RestartVideo_75: 1964899678
+      RestartVideo_76: -1389844547
+      RestartVideo_77: -400499176
+      RestartVideo_78: -486798987
+      RestartVideo_79: 385180898
+      RestartVideo_8: -750800574
+      RestartVideo_80: 1830520452
+      RestartVideo_81: 741909768
+      RestartVideo_82: 1152962204
+      RestartVideo_83: -1587453538
+      RestartVideo_9: 687210951
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

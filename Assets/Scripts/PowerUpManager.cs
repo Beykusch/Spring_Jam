@@ -44,7 +44,6 @@ public class PowerUpManager : MonoBehaviour
         middlePoint.SetActive(false);
         powerUpPanel.SetActive(true);
 
-        Debug.Log("Is animator null? " + (powerUpSlide == null));
         powerUpSlide.SetTrigger("PowerSlide");
 
         Cursor.lockState = CursorLockMode.None;
