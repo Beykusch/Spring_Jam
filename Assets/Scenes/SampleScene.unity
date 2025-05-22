@@ -2414,6 +2414,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3032204587119556042, guid: bcca80bd60dabe14989489a51daef346, type: 3}
+      propertyPath: m_Color.b
+      value: 0.25038794
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032204587119556042, guid: bcca80bd60dabe14989489a51daef346, type: 3}
+      propertyPath: m_Color.g
+      value: 0.25862572
+      objectReference: {fileID: 0}
+    - target: {fileID: 3032204587119556042, guid: bcca80bd60dabe14989489a51daef346, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9547169
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966883072737177369, guid: bcca80bd60dabe14989489a51daef346, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 74ad7b165a44d304c8d8371967bc9277, type: 3}
+    - target: {fileID: 7727013480415503515, guid: bcca80bd60dabe14989489a51daef346, type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 7727013480415503515, guid: bcca80bd60dabe14989489a51daef346, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 5adca973dfa6df54babe65922ba2d331, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
