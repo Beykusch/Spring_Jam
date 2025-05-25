@@ -9,7 +9,7 @@ public class EnemyChaseState : StateMachineBehaviour
     public float chaseSpeed = 5f;
 
     public float stopChasingDistance = 40f;
-    public float attackingDistance = 18f;
+    public float attackingDistance = 25f;
 
 
 
@@ -25,8 +25,12 @@ public class EnemyChaseState : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        agent.SetDestination(player.position);
-        
+        Vector3 toPlayer = player.position - agent.transform.position;
+        if (toPlayer.sqrMagnitude > 0.5f * 0.5f) // if moved more than 0.5 
+        {
+            agent.SetDestination(player.position);
+        }
+
 
         float distanceFromPlayer = Vector3.Distance(player.position, animator.transform.position);
 

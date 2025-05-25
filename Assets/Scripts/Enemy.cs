@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent navAgent;
 
 
+    private bool isAttacking = false;
     private bool isDead = false;
 
     public enum EnemyType
@@ -62,14 +64,42 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private Coroutine disableRoutine;
+
     public void EnableAttackCollider()
     {
-        attackCollider.enabled = true;
+        if (!attackCollider.enabled)
+        {
+            attackCollider.enabled = true;
+
+            // delete the previous one
+            if (disableRoutine != null)
+                StopCoroutine(disableRoutine);
+
+            // auto disable the collider
+            disableRoutine = StartCoroutine(AutoDisableCollider(0.3f)); // animation match
+        }
+    }
+
+    private IEnumerator AutoDisableCollider(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        attackCollider.enabled = false;
+        disableRoutine = null;
     }
 
     public void DisableAttackCollider()
     {
-        attackCollider.enabled = false;
+        if (attackCollider.enabled)
+        {
+            attackCollider.enabled = false;
+
+            if (disableRoutine != null)
+            {
+                StopCoroutine(disableRoutine);
+                disableRoutine = null;
+            }
+        }
     }
 
 

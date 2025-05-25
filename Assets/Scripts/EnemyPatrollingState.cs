@@ -10,9 +10,11 @@ public class EnemyPatrollingState : StateMachineBehaviour
     private Enemy enemyData;
     private float timer;
 
-    public float patrolSpeed = 2f;
+    public float viewAngle = 120f; 
+
+    public float patrolSpeed = 3.5f;
     public float patrollingTime = 6f;
-    public float detectionArea = 10f;
+    public float viewDistance = 30f;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -57,15 +59,39 @@ public class EnemyPatrollingState : StateMachineBehaviour
             animator.SetBool("isPatrolling", false);
         }
 
-        float distanceFromPlayer = Vector3.Distance(player.position, animator.transform.position);
-        if (distanceFromPlayer < detectionArea)
+        if (CanSeePlayer(animator.transform, player))
         {
             animator.SetBool("isChasing", true);
         }
+
     }
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent.SetDestination(agent.transform.position);
+    }
+
+    private bool CanSeePlayer(Transform enemy, Transform player)
+    {
+        Vector3 directionToPlayer = (player.position - enemy.position).normalized;
+        float distanceToPlayer = Vector3.Distance(enemy.position, player.position);
+
+        // Distance check
+        if (distanceToPlayer > viewDistance)
+            return false;
+
+        // angle check
+        float angleBetween = Vector3.Angle(enemy.forward, directionToPlayer);
+        if (angleBetween > viewAngle / 2f)
+            return false;
+
+        // obstacle check
+        if (Physics.Raycast(enemy.position + Vector3.up * 1.5f, directionToPlayer, out RaycastHit hit, viewDistance))
+        {
+            if (hit.transform.CompareTag("Player"))
+                return true; // saw player
+        }
+
+        return false;
     }
 }
