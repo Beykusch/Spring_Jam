@@ -25,11 +25,20 @@ public class CinematicManager : MonoBehaviour
         {
             uiImage.sprite = imageList[x];  // Set the initial image
         }
+
+        Time.timeScale = 0;
+        imageObject.SetActive(true);
+        inCinematic = true;
+
+        dialogue.textSpeak.text = string.Empty;
+        dialoguePanel.SetActive(true);
+        dialogue.StartDialogue();
+        dialogue.inDialogue = true;
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && inCinematic==false) // Enter cinematic
+        /*if (Input.GetKeyDown(KeyCode.E) && inCinematic==false) // Enter cinematic
         {
             Time.timeScale = 0;
             imageObject.SetActive(true);
@@ -39,7 +48,7 @@ public class CinematicManager : MonoBehaviour
             dialoguePanel.SetActive(true);
             dialogue.StartDialogue();
             dialogue.inDialogue = true;
-        }
+        }*/
 
         if ((Input.GetKeyDown(KeyCode.Mouse0) || Input.GetKeyDown(KeyCode.Space)) && inCinematic && dialogue.inDialogue == false)
         {
