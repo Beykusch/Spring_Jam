@@ -333,8 +333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chaseSpeed: 5
-  stopChasingDistance: 40
-  attackingDistance: 25
+  stopChasingDistance: 50
+  attackingDistance: 40
 --- !u!1101 &1656587553899249468
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

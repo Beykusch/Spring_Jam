@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         //int health = PlayerPrefs.GetInt("HealthEnemy") - 25;
     }
 
-    // Update is called once per frame
+    
     public void TakeDamage(int damageAmount)
     {
         if (isDead) return;
@@ -45,6 +45,11 @@ public class Enemy : MonoBehaviour
         HP -= damageAmount;
 
         SoundManager.Instance.PlayEnemyHitSound();
+
+        if (!animator.GetBool("isChasing"))
+        {
+            animator.SetBool("isChasing", true); 
+        }
 
         if (HP <= 0)
         {
