@@ -313,6 +313,7 @@ GameObject:
   - component: {fileID: 8651908682565335874}
   - component: {fileID: 269013556347259381}
   - component: {fileID: 1096845095443811011}
+  - component: {fileID: 832676957974618007}
   m_Layer: 0
   m_Name: GuyEnemy
   m_TagString: Enemy
@@ -447,6 +448,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyBullet: {fileID: 2909186928618520710}
   goonDamage: 25
+--- !u!114 &832676957974618007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931413279248462413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164406b765e99234794a74122b1a5ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3055965074204242130
 GameObject:
   m_ObjectHideFlags: 0
